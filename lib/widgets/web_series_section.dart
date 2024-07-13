@@ -14,7 +14,7 @@ class WebSeriesSection extends StatelessWidget {
     "assets/spider-man.png",
     "assets/spiderman1.jpg",
     "assets/spiderman2.jpg",
-    "assets/spiderman2.jpg"
+    "assets/spiderman3.jpg"
   ];
 
   @override
@@ -52,8 +52,7 @@ class WebSeriesSection extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Expanded(
-                            child: Column(
+                        child: Column(
                           children: [
                             const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -96,7 +95,7 @@ class WebSeriesSection extends StatelessWidget {
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold))
                           ],
-                        )),
+                        ),
                       )
                     ],
                   ),

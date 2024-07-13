@@ -52,8 +52,7 @@ class TvShowsSection extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Expanded(
-                            child: Column(
+                        child: Column(
                           children: [
                             const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -96,7 +95,7 @@ class TvShowsSection extends StatelessWidget {
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold))
                           ],
-                        )),
+                        ),
                       )
                     ],
                   ),
