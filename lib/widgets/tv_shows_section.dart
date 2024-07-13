@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:movies_app/screens/movie_screen.dart';
 
 class TvShowsSection extends StatelessWidget {
   TvShowsSection({super.key});
@@ -11,7 +12,7 @@ class TvShowsSection extends StatelessWidget {
     "Iron Man 4",
   ];
   final List _images = [
-    "assets/iron-man.png",
+    // "assets/iron-man.png",
     "assets/ironman1.jpg",
     "assets/ironman2.jpg",
     "assets/ironman3.jpg"
@@ -34,7 +35,13 @@ class TvShowsSection extends StatelessWidget {
         items: [
           for (int i = 0; i < _images.length; i++)
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MovieScreen(),
+                    ));
+              },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: ClipRRect(

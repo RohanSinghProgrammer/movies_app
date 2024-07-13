@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen>
   void initState() {
     super.initState();
 
-    _tabController = TabController(length: 4, vsync: this, initialIndex: 0);
+    _tabController = TabController(length: 3, vsync: this, initialIndex: 0);
     _tabController.addListener(_handleTabSelection);
   }
 
@@ -47,10 +47,11 @@ class _HomeScreenState extends State<HomeScreen>
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        drawer: const Drawer(),
+        // drawer: const Drawer(),
         appBar: AppBar(
+          leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
           foregroundColor: Colors.white,
-          title: const Text('Movies Streaming'),
+          title: const Text('Movies Buzz'),
           actions: [
             IconButton(onPressed: () {}, icon: const Icon(Icons.search))
           ],

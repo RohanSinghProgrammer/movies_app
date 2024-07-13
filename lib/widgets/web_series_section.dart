@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:movies_app/screens/movie_screen.dart';
 
 class WebSeriesSection extends StatelessWidget {
   WebSeriesSection({super.key});
@@ -11,7 +12,7 @@ class WebSeriesSection extends StatelessWidget {
     "Spider Man 4",
   ];
   final List _images = [
-    "assets/spider-man.png",
+    // "assets/spider-man.png",
     "assets/spiderman1.jpg",
     "assets/spiderman2.jpg",
     "assets/spiderman3.jpg"
@@ -34,7 +35,13 @@ class WebSeriesSection extends StatelessWidget {
         items: [
           for (int i = 0; i < _images.length; i++)
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MovieScreen(),
+                    ));
+              },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: ClipRRect(

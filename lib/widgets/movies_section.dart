@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:movies_app/screens/movie_screen.dart';
 
 class MoviesSection extends StatelessWidget {
   MoviesSection({super.key});
@@ -34,7 +35,13 @@ class MoviesSection extends StatelessWidget {
         items: [
           for (int i = 0; i < _images.length; i++)
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MovieScreen(),
+                    ));
+              },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: ClipRRect(
